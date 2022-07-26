@@ -3,24 +3,129 @@
   <head>
     <meta charset="utf-8">
     <title>Memory Match</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="boardstyle.css"/>
   </head>
   <body>
-    <!-- Barra de navegación -->
-    <div class="topnav" id="myTopnav">
-      <a href="index.html" class="active">Concurso</a>
-      <a href="https://www.pokemon.com/el/pokedex/">Pokedex</a>
-      <a href="https://www.laboratoria.la/">Laboratoria</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
     
+<!-- Barra de navegación -->
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Concurso</a>
+  <a href="https://www.pokemon.com/el/pokedex/">Pokedex</a>
+  <a href="https://www.laboratoria.la/">Laboratoria</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<!-- Barra de navegación -->
+    
+    <!-- Tablero -->
+
+    <section class="memory-game">
+    <div class="memory-card" data-framework="bulbasaur">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="bulbasaur" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="bulbasaur">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="bulbasaur" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="ivysaur">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/002.png" alt="ivysaur" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="ivysaur">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/002.png" alt="ivysaur" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
 
 
-    </main>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script> 
-                                                                                                                                                                                   
-  </body>
+    <div class="memory-card" data-framework="venusaur">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/003.png" alt="venusaur" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="venusaur">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/003.png" alt="venusaur" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="charmander">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/004.png" alt="charmander" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="charmander">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/004.png" alt="charmander" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="charmeleon">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/005.png" alt="charmeleon" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="charmeleon">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/005.png" alt="charmeleon" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="charizard">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/006.png" alt="charizard" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="charizard">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/006.png" alt="charizard" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="squirtle">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/007.png" alt="squirtle" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="squirtle">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/007.png" alt="squirtle" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+
+
+    <div class="memory-card" data-framework="wartortle">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/008.png" alt="wartortle" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="wartortle">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/008.png" alt="wartortle" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="blastoise">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/009.png" alt="blastoise" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="blastoise">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/009.png" alt="blastoise" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>
+
+</section>
+
+  <script src="script.js"></script>
+</body>
+
+<footer>
+  <img src="/memorymatchtiarenico/laboratoria.png" with="100" height="100" id="laboratorialogo" alt="laboratoria">
+</footer>
+
+  <div class="rrss">
+<a href="https://twitter.com/Laboratoriala?s=20&t=iKTf9glXcvMp3OUcNtvxxA">
+  <img src="/memorymatchtiarenico/twitter-logo-3.png" alt="twitter"with="24" height="24">
+<a href="https://www.facebook.com/laboratoriala/">
+  <img src="/memorymatchtiarenico/facebook.png" alt="facebook"with="24" height="24">
+<a href="https://www.instagram.com/laboratoriala/?hl=es">
+  <img src="/memorymatchtiarenico/Instagram-Icon.png" alt="instagram" with="24" height="24">
+</a>
+</div>
+
+
 </html>
+  
+    <!-- Tablero -->
+
+
