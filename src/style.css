@@ -3,6 +3,7 @@
     align-self: center;
     align-content: center;
     text-align: center;
+    margin: 0%;
 }
 main {
     align-items: center;
@@ -24,7 +25,7 @@ margin: 0;
 text-align: center;
 padding-left: 100px;
 padding-right: 100px;
-padding-top: 100px;
+padding-top: 50px;
 }
 
 h2 {
@@ -141,6 +142,7 @@ font-size: 24px;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+  
   }
   
   .button-54:active {
@@ -160,9 +162,19 @@ font-size: 24px;
 /*Footer*/
 footer {
   background-color: #ffffff;
+  width: 100%;
   position: absolute;
+  margin: 0%;
+  margin-top: 80px;
+  height: 105px;
   
- 
- 
-  height: 100px;
+}
+.rrss {
+  background-color: #ffffff;
+  align-items: left;
+  align-self: left;
+  position: absolute;
+  margin-left: 92%;
+  margin-bottom: 50%;
+  margin-top: 150px;
 }
