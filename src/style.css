@@ -142,6 +142,7 @@ font-size: 24px;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    margin-top: 25px;
   
   }
   
@@ -169,7 +170,6 @@ footer {
   height: 105px;
   
 }
-
 .rrss {
   background-color: #ffffff;
   align-items: left;
@@ -179,4 +179,3 @@ footer {
   margin-bottom: 50%;
   margin-top: 150px;
 }
-
