@@ -1,3 +1,8 @@
+import App from './components/App.js';
+
+//document.getElementById('root').appendChild(App());
+const collection = document.getElementsByClassName("memory-game");
+collection[0].appendChild(App());
 //Barra de navegación//
 function myFunction() {
     var x = document.getElementById("myTopnav");

@@ -2,8 +2,8 @@
 // Para incluir los diferentes sets de cartas podemos _importar_ el archivo
 // JavasSript que contenga el `export` correspondiente...
 //
-// import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
+ import pokemon from '../data/pokemon/pokemon.js';
+ console.log(pokemon);
 //
 // O alternativamente podríamos cargar el JSON de forma asíncrona usando
 // `fetch` en el momento que consideremos necesario.
@@ -15,10 +15,25 @@
 //
 
 const App = () => {
+  /*<div class="memory-card" data-framework="bulbasaur">
+      <img class="front-face" src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="bulbasaur" />
+      <img class="back-face" src="https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png" alt="JS Badge" />
+    </div>*/
+  var bulbasaur = pokemon.items[0]
   const el = document.createElement('div');
+  el.className = 'memory-card';
+  const frontFace = document.createElement('img');
+  frontFace.className = "front-face";
+  frontFace.src = bulbasaur.image;
 
-  el.className = 'App';
-  el.textContent = '';
+  const backFace = document.createElement('img');
+  backFace.className = "back-face";
+  backFace.src = "https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png"
+  el.appendChild(frontFace);
+  el.appendChild(backFace);
+  
+
+
 
   return el;
 };
