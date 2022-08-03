@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Memory Match</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="bienvenida">
+      <div id="descripcion">
+        <p>
+          ¡Bienvenid@ a Memory Match! Elige tu nivel de dificultad para jugar.
+        </p>
+      </div>
+      <button type="button" class="boton" id="facil">Fácil</button>
+      <button type="button" class="boton" id="medio">Medio</button>
+      <button type="button" class="boton" id="dificil">Difícil</button>
+    </div>
+    <!-- Primera página -->
+    <!-- Sección Fácil -->
+    <section id="facilSection">
+      <div class="facilUp">
+        <div class="instrucciones">
+          Ha seleccionado Nivel Fácil. Selecciona dos cartas para ver si hacen
+          match.
+        </div>
+      </div>
+      <!--img src='imagenes/facil.png' alt='Fácil' id='facil'-->
+    </section>
+    <!-- Sección Fácil -->
+    <!-- Sección Medio -->
+    <section id="medioSection">
+      <div class="medioUp">
+        <div class="instrucciones">
+          Ha seleccionado Nivel Medio. Selecciona dos cartas para ver si hacen
+          match.
+        </div>
+      </div>
+      <!--img src='imagenes/medio.png' alt='Medio' id='medio'-->
+    </section>
+    <!-- Sección Medio -->
+    <!-- Sección Difícil -->
+    <section id="dificilSection">
+      <div class="dificilUp">
+        <div class="instrucciones">
+          Ha seleccionado Nivel Difícil. Selecciona dos cartas para ver si hacen
+          match.
+        </div>
+      </div>
+      <!--img src='imagenes/dificil.png' alt='Difícil' id='dificil'-->
+    </section>
+    <!-- Sección Difícil -->
+    <!-- Juego -->
+    <main id="game">
+      <div id="root" class="root"></div>
+      <button type="button" class="boton" onclick="location.href='index.html';">
+        volver a jugar
+      </button>
+    </main>
     <script src="main.js" type="module"></script>
   </body>
 </html>

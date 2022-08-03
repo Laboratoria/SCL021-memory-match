@@ -1,0 +1,104 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-image: 
+  background-size: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url(imagenes/fondofiltro.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#facilSection {
+  display: none;
+}
+#medioSection {
+  display: none;
+}
+#dificilSection {
+  display: none;
+}
+#game {
+  display: none;
+}
+/*
+Container
+*/
+.container {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(6, 6rem);
+  grid-template-rows: repeat(3, 8.5rem);
+  gap: 25px;
+  max-width: 1000px;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  perspective: 1000px;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  margin: 5px;
+  top: 0;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  border-radius: 7px;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.9);
+}
+
+.imageBack,
+.imageFront {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.7));
+  pointer-events: none;
+}
+
+.card-.imageBack {
+  background: gainsboro;
+  transform: rotateY(180deg);
+}
+
+.flip {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  margin: 5px;
+  top: 0;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  border-radius: 7px;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  border: 1px solid black;
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.8);
+}
+
+.imageBack {
+  background-color: white;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 5px;
+}
+
+.imageFront {
+  backface-visibility: hidden;
+}
+
