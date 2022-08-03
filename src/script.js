@@ -1,8 +1,9 @@
 import App from './components/App.js';
 
 //document.getElementById('root').appendChild(App());
-const collection = document.getElementsByClassName("memory-game");
-collection[0].appendChild(App());
+const collection = document.getElementsByClassName("memoryGame");
+//collection[0].appendChild(App()); 
+
 //Barra de navegación//
 function myFunction() {
     var x = document.getElementById("myTopnav");
@@ -14,7 +15,7 @@ function myFunction() {
   }
   //Barra de navegación//
 
-//Tablero//
+//memory-game//
 const cards = document.querySelectorAll('.memory-card');
 
 let hasFlippedCard = false;
