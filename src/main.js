@@ -12,7 +12,7 @@ function vistados() {
   //document.getElementById('medioSection').style.display = "none";
   //document.getElementById('DificilSection').style.display = "block";
   document.getElementById("game").style.display = "block";
-  //let dificil = 3;
+  //let facil = 3;
   //document.getElementById('footer').style.display = "block";
 }
 //Vista 3 - sección Medio
@@ -23,7 +23,7 @@ function vistatres() {
   document.getElementById("medioSection").style.display = "block";
   //document.getElementById('DificilSection').style.display = "block";
   document.getElementById("game").style.display = "block";
-  //let dificil = 5;
+  //let medio = 5;
   //document.getElementById('footer').style.display = "block";
 }
 //Vista 4 - sección Dificil

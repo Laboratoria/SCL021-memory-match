@@ -11,48 +11,90 @@
 //   .catch(console.error);
 
 import comics from "../data/comics/comics.js";
-console.log(comics);
+//console.log(comics);
 const comicsCard = comics.items;
-const doubledCards = comicsCard.concat(comicsCard);
+const doubledCards = comicsCard.concat(comicsCard); // se copia a si mismo, duplicando.
+
+//Barajar las cartas, algoritmo de Fisher-Yates
+let i = doubledCards.length,
+  j,
+  temp; //j es un número random que se generará en el loop. temp guarda el valor temporal para hacer los intercambios
+while (--i > 0) {
+  //el array comienza con la cantidad total de cartas y cada vez va restando 1.
+  j = Math.floor(Math.random() * (i + 1)); //establecemos valor para j, generamos un número random entre 0 e i
+  temp = doubledCards[j]; // establecemos el temp. llamamos al índice j de nuestro array
+  doubledCards[j] = doubledCards[i]; //tomamos el array en su índice random (j) y lo cambiamos por el índice que está en el loop (i)
+  doubledCards[i] = temp; //tomamos el la posición del índice (i)  y le damos el valor de temp.
+}
 
 const App = () => {
   //Creación de container y sus atributos
-  const el = document.createElement("div");
-  el.setAttribute("class", "container");
-  el.setAttribute("id", "cardContainer");
+  const cardContainer = document.createElement("div");
+  cardContainer.setAttribute("class", "container");
+  cardContainer.setAttribute("id", "cardContainer");
 
-  return el;
-};
-/*apuntes: 
-Crear un elemento:  document.createElement("elemento")
-Escribir texto en un elemento: element.textContent = "texto"
-Escribir  HTML en un elemento: element.innerHTML=codigo HTML
-Añadir un elemento al DOM: parent.appendChild(element)
-Establece el valor de un atributo en el elemento indicado: Element.setAttribute(name, value) y para 
-   obtener el valor actual de un atributo, se utiliza getAttribute()
-La propiedad de sólo lectura Element.classList devuelve una colección activa de DOMTokenList de los atributos de clase del elemento.
-  Element.classList
-*/
-/*
-const App = () => {
-  const el = document.createElement("div");
+  //Creación de cartas y sus atributos
+  for (let i = 0; i < doubledCards.length; i++) {
+    const card = document.createElement("div");
+    let imageFront = document.createElement("img");
+    let imageBack = document.createElement("img"); //imagen caricatura//
 
-  el.className = "App";
-  el.textContent = "Bienvenido!";
-  */
+    card.className = "card";
+    cardContainer.appendChild(card);
 
-/*const divCards = document.createElement("div");
-  divCards.textContent = "Soy hijo de el";
+    imageFront.setAttribute("src", "imagenes/incognita.jpg");
+    imageFront.setAttribute("class", "imageFront");
+    imageFront.setAttribute("alt", "FrontCard");
+    card.appendChild(imageFront);
 
-  for (let i = 0; i < 12; i++) {
-    const pElement = document.createElement("p");
-    pElement.textContent = "p " + i;
-    divCards.appendChild(pElement);
+    imageBack.setAttribute("src", doubledCards[i].image);
+    imageBack.setAttribute("class", "imageBack");
+    imageBack.setAttribute("alt", doubledCards[i].id);
+    card.setAttribute("id", doubledCards[i].id);
+    card.appendChild(imageBack);
+
+    //Darle la clase 'flip' al hacer click, esto hace que las cartas giren
+    card.addEventListener("click", (e) => {
+      card.classList.toggle("flip"); //le damos clase flip
+      checkCards(e); //pasamos el evento
+    });
   }
 
-  el.appendChild(divCards);* /
+  //Función match
+  const checkCards = (e) => {
+    console.log(e);
+    const clickedCard = e.target;
+    //al hacer click el evento capturará data, y target va a ser el elemento donde hicimos click
+    clickedCard.classList.add("flipped");
+    //se le da la clase flipped (sirve para la comparación de las cartas que se giran)
+    const flippedCards = document.querySelectorAll(".flipped");
+    //llamamos a todos los elementos con clase flipped
+    const flip = document.querySelectorAll(".flip");
+    //llamamos a todos los elementos con la clase flip
+    if (flippedCards.length === 2) {
+      // si se giran 2 cartas
+      if (
+        flippedCards[0].getAttribute("id") ===
+        flippedCards[1].getAttribute("id")
+      ) {
+        //comparamos ambos
+        console.log("match"); //si son iguales da match
+        flippedCards.forEach((card) => {
+          //iteramos en el array
+          card.classList.remove("flipped"); //quitamos la clase flipped
+          card.style.pointerEvents = "none"; //evitamos que se le haga click
+        });
+      } else {
+        console.log("wrong");
+        flippedCards.forEach((card) => {
+          //iteramos en el array
+          card.classList.remove("flipped"); //quitamos la clase flipped
+          setTimeout(() => card.classList.remove("flip"), 1000); //quitamos la clase flip (para que se gire de nuevo) y ocurre en 1000 milisegundos
+        });
+      }
+    }
+  };
 
-  return el;
-};*/
-
+  return cardContainer;
+};
 export default App;

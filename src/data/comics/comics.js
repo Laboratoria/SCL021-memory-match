@@ -21,8 +21,20 @@ export default {
       image: "././imagenes/pinky_cerebro.jpg",
       bgColor: "#F05032",
     },
-    { id: "piolin", image: "././imagenes/piolin.jpg", bgColor: "#F05032" },
-    { id: "rugrats", image: "././imagenes/rugrats.jpg", bgColor: "#F05032" },
-    { id: "xmen", image: "././imagenes/xmen.jpg", bgColor: "#F05032" },
+    {
+      id: "piolin",
+      image: "././imagenes/piolin.jpg",
+      bgColor: "#F05032",
+    },
+    {
+      id: "rugrats",
+      image: "././imagenes/rugrats.jpg",
+      bgColor: "#F05032",
+    },
+    {
+      id: "xmen",
+      image: "././imagenes/xmen.jpg",
+      bgColor: "#F05032",
+    },
   ],
 };
