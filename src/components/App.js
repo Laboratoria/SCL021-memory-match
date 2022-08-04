@@ -39,6 +39,10 @@ board.className = "board";
 
    const cardBack = document.createElement("div");
     cardBack.className = "cardBack";
+    
+
+      
+    
     card.appendChild(cardBack);
  
 
@@ -57,6 +61,10 @@ board.className = "board";
     cardImage.className = "image";
     cardImage.src = "https://img.game.co.uk/assets/features/hubs/pokemon/backCover.png";
     cardFront.appendChild(cardImage);
+    cardImage.onclick = () => {
+      console.log(baraja[i].image)
+      cardImage.classList.add ("hide")
+    }
   }
    
    return board;
