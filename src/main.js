@@ -36,3 +36,12 @@ function vistacuatro() {
   //let dificil = 7;
   //document.getElementById('footer').style.display = "block";
 }
+/*function ganaste() {
+    document.getElementById("game").style.display = "none";
+        document.getElementById("facilSection").style.display = "none";
+        document.getElementById("medioSection").style.display = "none";
+        
+      document.getElementById("dificilSection").style.display = "none";
+       document.getElementById("ganaste").style.display = "block";
+  
+}*/

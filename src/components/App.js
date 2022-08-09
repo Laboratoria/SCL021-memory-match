@@ -62,7 +62,7 @@ const App = () => {
 
   //Función match
   const checkCards = (e) => {
-    console.log(e);
+    // console.log(e);
     const clickedCard = e.target;
     //al hacer click el evento capturará data, y target va a ser el elemento donde hicimos click
     clickedCard.classList.add("flipped");
@@ -78,19 +78,28 @@ const App = () => {
         flippedCards[1].getAttribute("id")
       ) {
         //comparamos ambos
-        console.log("match"); //si son iguales da match
+        // console.log("match"); //si son iguales da match
         flippedCards.forEach((card) => {
           //iteramos en el array
           card.classList.remove("flipped"); //quitamos la clase flipped
           card.style.pointerEvents = "none"; //evitamos que se le haga click
         });
       } else {
-        console.log("wrong");
+        // console.log("wrong");
         flippedCards.forEach((card) => {
           //iteramos en el array
           card.classList.remove("flipped"); //quitamos la clase flipped
           setTimeout(() => card.classList.remove("flip"), 1000); //quitamos la clase flip (para que se gire de nuevo) y ocurre en 1000 milisegundos
         });
+      }
+      //mensaje al terminar de jugar
+      if (flip.length === 4) {
+        document.getElementById("game").style.display = "none";
+        document.getElementById("facilSection").style.display = "none";
+        document.getElementById("medioSection").style.display = "none";
+
+        document.getElementById("dificilSection").style.display = "none";
+        document.getElementById("ganaste").style.display = "block";
       }
     }
   };
