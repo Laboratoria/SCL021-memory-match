@@ -10,7 +10,7 @@ export default {
       id: "johnny_bravo",
       image: "././imagenes/johnny_bravo.jpg",
       bgColor: "#339933",
-    },
+    } /*,
     {
       id: "looney_tunes",
       image: "././imagenes/looney_tunes.jpg",
@@ -35,6 +35,6 @@ export default {
       id: "xmen",
       image: "././imagenes/xmen.jpg",
       bgColor: "#F05032",
-    },
+    }*/,
   ],
 };
