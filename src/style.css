@@ -21,16 +21,24 @@ body {
   font-size: 150%;
   color: #003a70;
 }
-#facilSection {
+.parrafo {
+  text-align: center;
+  color: #003a70;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#easySection {
   display: none;
 }
-#medioSection {
+#mediumSection {
   display: none;
 }
-#dificilSection {
+#hardSection {
   display: none;
 }
-#game {
+#win {
   display: none;
 }
 /*
@@ -44,11 +52,12 @@ Container
   grid-template-columns: repeat(7, 7rem);
   grid-template-rows: repeat(3, 7.5rem);
   gap: 25px;
-  /*max-width: 1000px;*/
+  max-width: 1000px;
   justify-content: center;
   text-align: center;
   margin-top: 40px;
   margin-left: 10%;
+  padding: 40px;
   /*margin: auto;
 margin-top: 40px;
 margin-bottom: 40px;
@@ -122,7 +131,7 @@ perspective: 900px;*/
   text-align: center;
 }
 
-.boton {
+.button {
   padding: 10px 20px;
   background: #00d2f3;
   color: #263f6a;
@@ -131,17 +140,6 @@ perspective: 900px;*/
   transition-duration: 0.4s;
   cursor: pointer;
   margin-top: 4%;
-  font-family: "Comic Sans MS", "Gill Sans MT", Calibri, "Trebuchet MS",
-    sans-serif;
-  font-size: 25px;
-}
-.botonVolver {
-  padding: 10px 20px;
-  background: #00d2f3;
-  color: #263f6a;
-  border-radius: 15px;
-  transition-duration: 0.4s;
-  cursor: pointer;
   font-family: "Comic Sans MS", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
   font-size: 25px;
@@ -166,14 +164,14 @@ perspective: 900px;*/
     sans-serif;
   font-size: 20px;
 }
-.instrucciones {
+.instructionText {
   text-align: center;
   color: #003a70;
   background-color: rgba(255, 255, 255, 0.7);
   margin-left: 10%;
   margin-right: 10%;
 }
-#ganaste {
+#win {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.7);
   color: #97d9e1;
@@ -181,7 +179,7 @@ perspective: 900px;*/
   margin-left: 30%;
   display: none;
 }
-
+/* 
 #perdiste {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.7);
@@ -189,7 +187,4 @@ perspective: 900px;*/
   width: 40%;
   margin-left: 30%;
   display: none;
-}
-/*12  color: #263f6a
-/*margin-left: 65%;* /12
-/*margin-left: 65%;* /121212*/
+} */
