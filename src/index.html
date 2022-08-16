@@ -1,102 +1,114 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Match</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Memory Match</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <!---<div id="bienv
-    <!-- HeadeR
-     <header class='header' id='header'>
-      <img src=" imagenes/memorycartoons.png" alt="memory cartoons" id="descripcion" width="800" height="180">
-    </header>-->
-  <!-- Header -->
-  <div id="bienvenida">
-    <center>
-      <div id="descripcion">
-        <figure>
-          <img src="imagenes/memorycartoons.png" alt="memory cartoons" width="800" height="180" />
-          <!--figcaption>memorycartoons</figcaption-->
-          <p>
-            ¡Bienvenid@s a Memory Cartoons! <br> Elige tu nivel de dificultad para jugar. 
-          </p>
-          <input class="input" type="text" id="usuario" placeholder="Ingresa tu nombre" autocomplete="off" />
-          <br />
-          <button type="button" class="boton" id="facil">Fácil</button>
-          <button type="button" class="boton" id="medio">Medio</button>
-          <button type="button" class="boton" id="dificil">Difícil</button>
-    </center>
-  </div>
-  <!-- Primera página -->
-  <!-- Sección Fácil -->
-  <section id="facilSection">
-    <div class="facilUp">
-      <div class="instrucciones">
-        Ha seleccionado Nivel Fácil.<br> Selecciona dos cartas para ver si hacen
-        match.
-      </div>
+  <body>
+    <div id="containerCover1">
+      <header>
+        <div class="containerHeader">
+          <img src="imagenes/memorycartoons.png" alt="memory cartoons" />
+        </div>
+      </header>
+      <main>
+        <div class="containerCover2">
+          <div class="cover">
+            <div class="text">
+              <h2>Elige el nivel de dificultad para jugar.</h2>
+              <div class="inputText">
+                <input
+                  class="input"
+                  type="text"
+                  id="usuario"
+                  placeholder="Ingresa tu nombre"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="buttonCover">
+                <button type="button" class="button" id="facil">Fácil</button>
+                <button type="button" class="button" id="medio">Medio</button>
+                <button type="button" class="button" id="dificil">
+                  Difícil
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
-    <!--img src='imagenes/facil.png' alt='Fácil' id='facil'-->
-  </section>
-  <!-- Sección Fácil -->
-  <!-- Sección Medio -->
-  <section id="medioSection">
-    <div class="medioUp">
-      <div class="instrucciones">
-        Ha seleccionado Nivel Medio.<br> Selecciona dos cartas para ver si hacen
-        match.
+    <!-- Sección Fácil -->
+    <section id="easySection">
+      <div class="instructionText">
+        <h2>Has seleccionado el Nivel Fácil</h2>
+        <h3>Selecciona dos cartas para ver si hacen match.</h3>
       </div>
-    </div>
-    <!--img src='imagenes/medio.png' alt='Medio' id='medio'-->
-  </section>
-  <!-- Sección Medio -->
-  <!-- Sección Difícil -->
-  <section id="dificilSection">
-    <div class="dificilUp">
-      <div class="instrucciones">
-        Ha seleccionado Nivel Difícil.<br> Selecciona dos cartas para ver si hacen
-        match.
+    </section>
+    <!-- Sección Medio -->
+    <section id="mediumSection">
+      <div class="instructionText">
+        <h2>Ha seleccionado el Nivel Medio.</h2>
+        <h3>Selecciona dos cartas para ver si hacen match.</h3>
       </div>
-    </div>
-    <!--img src='imagenes/dificil.png' alt='Difícil' id='dificil'-->
-  </section>
-  <!-- Sección Difícil -->
-  <!-- Sección Ganaste -->
-  <section id="ganaste">
-    <center>
-     <!-- <div class="ganaste">¡GANASTE!</div--> 
-      <img src="imagenes/ganaste.png" alt="ganaste" width="300" height="100" /> <br>
-      <img src="imagenes/gifganaste.gif" alt="Ganaste" />
-      <button type="button" class="boton" onclick="location.href='index.html';">
-        volver a jugar
-      </button>
-    </center>
-  </section>
-  <!-- Sección Ganaste -->
-        <!-- Sección Perdiste -->
-  <section id="perdiste">
-    <center>
-      <img src="imagenes/gameover.png" alt="perdiste" width="300" height="100" /> <br>
-      <img src="imagenes/perdiste.gif" alt="Perdiste" />
-      <button type="button" class="boton" onclick="location.href='index.html';">
-        volver a jugar
-      </button>
-    </center>
-  </section>
-  <!-- Sección Perdiste -->
-  <!-- Juego -->
-  <main id="game">
-    <div id="root" class="root"></div>
-    <center>
-      <button type="button" class="botonVolver" onclick="location.href='index.html';">
-      volver a jugar
-      </button>
-    </center>
-  </main>
-  <script src="main.js" type="module"></script>
-</body>
-
+    </section>
+    <!-- Sección Difícil -->
+    <section id="hardSection">
+      <div class="instructionText">
+        <h2>Ha seleccionado el Nivel Difícil.</h2>
+        <h3>Selecciona dos cartas para ver si hacen match.</h3>
+      </div>
+    </section>
+    <!-- Sección Ganaste -->
+    <section id="win">
+      <div class="winGame">
+        <img src="imagenes/ganaste.png" alt="ganaste" />
+        <img src="imagenes/gifganaste.gif" alt="ganaste" />
+        <div class="buttonReplay">
+          <button
+            type="button"
+            class="button"
+            onclick="location.href='index.html';"
+          >
+            Volver a jugar
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Sección Perdiste -->
+    <!-- <section id="perdiste">
+      <center>
+        <img
+          src="imagenes/gameover.png"
+          alt="perdiste"
+          width="300"
+          height="100"
+        />
+        <br />
+        <img src="imagenes/perdiste.gif" alt="Perdiste" />
+        <button
+          type="button"
+          class="boton"
+          onclick="location.href='index.html';"
+        >
+          volver a jugar
+        </button>
+    </section> -->
+    <!-- Juego -->
+    <main id="game">
+      <div id="root" class="root"></div>
+      <div class="buttonReplay">
+        <button
+          type="button"
+          class="button"
+          onclick="location.href='index.html';"
+        >
+          Volver a jugar
+        </button>
+      </div>
+    </main>
+    <script src="main.js" type="module"></script>
+  </body>
 </html>
