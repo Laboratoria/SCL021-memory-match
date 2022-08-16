@@ -98,11 +98,11 @@ const App = () => {
       //mensaje al terminar de jugar
       if (flip.length === 14) {
         document.getElementById("game").style.display = "none";
-        document.getElementById("facilSection").style.display = "none";
-        document.getElementById("medioSection").style.display = "none";
+        document.getElementById("easySection").style.display = "none";
+        document.getElementById("mediumSection").style.display = "none";
 
-        document.getElementById("dificilSection").style.display = "none";
-        document.getElementById("ganaste").style.display = "block";
+        document.getElementById("hardSection").style.display = "none";
+        document.getElementById("win").style.display = "block";
       }
     }
   };
