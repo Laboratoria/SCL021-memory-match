@@ -21,6 +21,13 @@ body {
   font-size: 150%;
   color: #003a70;
 }
+.parrafo {
+  text-align: center;
+  color: #003a70;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-left: 5%;
+  margin-right: 5%;
+}
 #facilSection {
   display: none;
 }
@@ -190,6 +197,11 @@ perspective: 900px;*/
   margin-left: 30%;
   display: none;
 }
-/*12  color: #263f6a
-/*margin-left: 65%;* /12
-/*margin-left: 65%;* /121212*/
+.saludo {
+  font-size: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  color: #003a70;
+}

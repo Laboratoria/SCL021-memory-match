@@ -9,9 +9,12 @@
 //   .then(resp => resp.json())
 //   .then(console.log)
 //   .catch(console.error);
-
+//import comicsfacil from "../data/comicsfacil/comicsfacil.js";
+//import comicsmedio from "../data/comicsmedio/comicsmedio.js";
 import comics from "../data/comics/comics.js";
+
 //console.log(comics);
+
 const comicsCard = comics.items;
 const doubledCards = comicsCard.concat(comicsCard); // se copia a si mismo, duplicando.
 
@@ -93,7 +96,7 @@ const App = () => {
         });
       }
       //mensaje al terminar de jugar
-      if (flip.length === 4) {
+      if (flip.length === 14) {
         document.getElementById("game").style.display = "none";
         document.getElementById("facilSection").style.display = "none";
         document.getElementById("medioSection").style.display = "none";
