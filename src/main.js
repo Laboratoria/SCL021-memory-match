@@ -5,6 +5,9 @@ document.getElementById("root").appendChild(App());
 //Vista 2 - sección Fácil
 document.getElementById("facil").addEventListener("click", vistados);
 function vistados() {
+  //Incluido Usuario
+  let user = document.getElementById("name").value;
+  document.getElementById("hiEs").innerText = "Bienvenido, " + user;
   document.getElementById("containerCover1").style.display = "none";
   document.getElementById("easySection").style.display = "block";
   document.getElementById("game").style.display = "block";
@@ -16,6 +19,9 @@ function vistados() {
 //Vista 3 - sección Medio
 document.getElementById("medio").addEventListener("click", vistatres);
 function vistatres() {
+  //Incluido Usuario
+  let user = document.getElementById("name").value;
+  document.getElementById("hiMs").innerText = "Bienvenido, " + user;
   document.getElementById("containerCover1").style.display = "none";
   document.getElementById("mediumSection").style.display = "block";
   document.getElementById("game").style.display = "block";
@@ -27,6 +33,9 @@ function vistatres() {
 //Vista 4 - sección Dificil
 document.getElementById("dificil").addEventListener("click", vistacuatro);
 function vistacuatro() {
+  //Incluido Usuario
+  let user = document.getElementById("name").value;
+  document.getElementById("hiHs").innerText = "Bienvenido, " + user;
   document.getElementById("containerCover1").style.display = "none";
   document.getElementById("hardSection").style.display = "block";
   document.getElementById("game").style.display = "block";
