@@ -246,6 +246,11 @@ body {
   width: 30%;
   margin-left: 35%;
 }
+.audio {
+  margin-top: 1%;
+  display: flex;
+  justify-content: end;
+}
 
 @media only screen and (max-width: 600px) {
   .container {

@@ -12,6 +12,7 @@
 //import comicsfacil from "../data/comicsfacil/comicsfacil.js";
 //import comicsmedio from "../data/comicsmedio/comicsmedio.js";
 import comicsHard from "../data/comicsHard/comicsHard.js";
+import celebracion from "./sound.js";
 
 //console.log(comics);
 
@@ -103,6 +104,7 @@ const App = () => {
 
         document.getElementById("hardSection").style.display = "none";
         document.getElementById("win").style.display = "block";
+        celebracion();
       }
     }
   };
