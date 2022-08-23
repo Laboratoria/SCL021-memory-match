@@ -20,16 +20,14 @@
               <input
                 class="input"
                 type="text"
-
                 id="name"
                 placeholder="Ingresa tu nombre"
                 autocomplete="off"
               />
-            </div>
-            <div class="text">
-              <h2>Elige el nivel de dificultad para jugar.</h2>
-
-                <div class="buttonCover">
+              <div class="text">
+                <h2>Elige el nivel de dificultad para jugar.</h2>
+              </div>
+              <div class="buttonCover">
                 <button type="button" class="button" id="facil">Fácil</button>
                 <button type="button" class="button" id="medio">Medio</button>
                 <button type="button" class="button" id="dificil">
@@ -102,6 +100,15 @@
     </section> -->
     <!-- Juego -->
     <main id="game">
+      <div class="audio">
+        <audio
+          src="utilities/sounds/intro.mp3"
+          autoplau
+          type="audio/mp3"
+          controls
+          loop
+        ></audio>
+      </div>
       <div id="root" class="root"></div>
       <div class="buttonReplay">
         <button

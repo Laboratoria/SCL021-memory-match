@@ -1,16 +1,51 @@
+@font-face {
+  font-family: "Cabin Sketch";
+  src: url("utilities/fonts/Cabin_Sketch/CabinSketch-Bold.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Fugaz One";
+  src: url("utilities/fonts/Fugaz_One/FugazOne-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Handlee";
+  src: url("utilities/fonts/Handlee/Handlee-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Fredoka_One";
+  src: url("utilities/fonts/Fredoka_One/FredokaOne-Regular.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Leckerli_One";
+  src: url("utilities/fonts/Leckerli_One/LeckerliOne-Regular.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-* {
+/**{
   outline: 1px solid limegreen !important;
-}
+}*/
+
 body {
   background-size: cover;
   background-attachment: fixed;
   background-image: url(imagenes/fondofiltro.jpg);
 }
+
 .containerHeader img {
   width: 60%;
   height: 100%;
@@ -22,6 +57,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
 .cover {
   display: flex;
   width: 60%;
@@ -31,8 +67,8 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  padding: 5%;
-  margin-top: 4%;
+  padding: 2%;
+  margin-top: 3%;
   background-color: rgba(255, 255, 255, 0.7);
   display: flex;
   justify-content: center;
@@ -40,38 +76,32 @@ body {
 }
 .input {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   padding: 1%;
   border-color: #97d9e1;
-  font-family: "Comic Sans MS", "Gill Sans MT", "Trebuchet MS", sans-serif;
-  font-size: 20px;
-  /*justify-content: center;*/
+  font-family: "Cabin Sketch";
+  font-size: 25px;
+  color: #037ef3;
+  text-align: center;
+  margin-top: 1%;
 }
 .text {
-  font-family: "Comic Sans MS", "Gill Sans MT", "Trebuchet MS", sans-serif;
-  font-size: 15px;
+  font-family: "Handlee";
+  font-size: 22px;
   color: #003a70;
   padding: 2%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
 }
 .buttonCover {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
 }
-/*.button {
-  padding: 1%;
-  background: #00d2f3;
-  border-radius: 10px;
-  border-color: #263f6a;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  font-family: "Comic Sans MS", "Gill Sans MT", "Trebuchet MS", sans-serif;
-  font-size: 25px;
-  color: #263f6a;
-}*/
+
 .button {
   box-shadow: 3px 4px 0px 0px #2f96d6;
   background-color: #00d2f3;
@@ -80,11 +110,12 @@ body {
   display: inline-block;
   cursor: pointer;
   color: #263f6a;
-  font-family: "Comic Sans MS";
   font-size: 25px;
   padding: 10px 30px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #3e878a;
+  margin: 2%;
+  font-family: "Fredoka_One";
 }
 .button:active {
   position: relative;
@@ -97,6 +128,18 @@ body {
 .button:hover {
   background-color: #28c3db;
 }
+
+.buttonReplay {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+
+#name::placeholder {
+  text-align: center;
+  color: #037ef3;
+}
+
 #easySection {
   display: none;
 }
@@ -108,106 +151,126 @@ body {
 }
 #win {
   display: none;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 #game {
   display: none;
 }
-/*.container {
-  display: grid;
-  background-color: rgba(255, 255, 255, 0.7);
-  height: 40%;
-  width: 80%;
-  grid-template-columns: repeat(7, 7rem);
-  grid-template-rows: repeat(3, 7.5rem);
-  gap: 25px;
-  max-width: 1000px;
-  justify-content: center;
-  text-align: center;
-  margin-top: 40px;
-  margin-left: 10%;
-  padding: 40px;
-  /*margin: auto;
-margin-top: 40px;
-margin-bottom: 40px;
-perspective: 900px;
-}*/
-/*.card {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  /*transition: transform 0.8s; eliminar*/
-/* margin: 5px; eliminar
-/*top: 0; eliminar*/
-/*cursor: pointer;
-  transform-style: preserve-3d;
-  border-radius: 7px;
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.9);
-  margin-top: 60%;
-}*/
-/*.imageBack,
-.imageFront {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-radius: 5px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.7));
-  pointer-events: none;
-}
-.card-.imageBack {
-  background: gainsboro;
-  transform: rotateY(180deg);
-}
-.flip {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  /* margin: 5px; este hace que al girar la tarjeta suba, eliminar*/
-/*top: 0;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  border-radius: 7px;
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  border: 1px solid black;
-  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.8);
-}
-.imageBack {
-  background-color: white;
-  transform-style: preserve-3d;
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 5px;
-}
-.imageFront {
-  backface-visibility: hidden;
-}
+
 .instructionText {
   text-align: center;
   color: #003a70;
   background-color: rgba(255, 255, 255, 0.7);
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-top: 2%;
+  font-size: 25px;
+  font-family: "Handlee";
 }
-#win {
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #97d9e1;
-  width: 40%;
-  margin-left: 30%;
-  display: none;
-}
-/* #perdiste {
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #97d9e1;
-  width: 40%;
-  margin-left: 30%;
-  display: none;
-} */
 
+.greeting {
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 45px;
+  font-weight: bold;
+  font-family: "Cabin Sketch";
+  color: #037ef3;
+}
+
+.root {
+  display: flex;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-left: 5%;
+  margin-top: 2%;
+  padding: 1%;
+}
+
+.easySection {
+  flex-direction: unset;
+  width: 60%;
+  height: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: unset;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  perspective: 1000px;
+  padding: 1%;
+  transform: rotateY(0deg);
+}
+
+.card {
+  width: 10vw;
+  height: 20vh;
+  min-width: 200px;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: rotateY(180deg);
+  cursor: pointer;
+  margin: 1%;
+}
+
+.flip {
+  transform: rotateY(0deg);
+  position: relative;
+}
+.imageBack {
+  backface-visibility: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  border: solid #0dd3ff;
+  pointer-events: none;
+}
+
+.imageFront {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  border: solid #0dd3ff;
+  pointer-events: none;
+  transform: scaleX(1);
+  transform: rotateY(180deg);
+}
+.winGame {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  margin-left: 35%;
+}
+.audio {
+  margin-top: 1%;
+  display: flex;
+  justify-content: end;
+}
+/*.winGame {
+ display: flex; 
+ flex-direction: column;
+ justify-content: center;
+ width: 30%;
+  padding: 2%;
+}*/
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .text,
+  .button,
+  .inputText,
+  .instructionText,
+  .input,
+  .hiEs {
+    font-size: 10px;
+  }
+}
