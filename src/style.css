@@ -251,13 +251,6 @@ body {
   display: flex;
   justify-content: end;
 }
-/*.winGame {
- display: flex; 
- flex-direction: column;
- justify-content: center;
- width: 30%;
-  padding: 2%;
-}*/
 
 @media only screen and (max-width: 600px) {
   .container {
