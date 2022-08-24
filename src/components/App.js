@@ -12,7 +12,7 @@
 //import comicsfacil from "../data/comicsfacil/comicsfacil.js";
 //import comicsmedio from "../data/comicsmedio/comicsmedio.js";
 import comicsHard from "../data/comicsHard/comicsHard.js";
-import celebracion from "./sound.js";
+import celebracion from "./sounds.js";
 
 //console.log(comics);
 
