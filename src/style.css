@@ -63,6 +63,7 @@ body {
   width: 60%;
   height: 100%;
 }
+
 .inputText {
   width: 100%;
   height: 100%;
@@ -173,6 +174,29 @@ body {
   font-family: "Cabin Sketch";
   color: #037ef3;
 }
+@media only screen and (max-width: 800px) {
+  .text,
+  .button,
+  .inputText,
+  .instructionText,
+  .input,
+  .hiEs,
+  .greeting {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .text,
+  .button,
+  .inputText,
+  .instructionText,
+  .input,
+  .hiEs,
+  .greeting {
+    font-size: 12px;
+  }
+}
 
 .root {
   display: flex;
@@ -198,17 +222,29 @@ body {
   padding: 1%;
   transform: rotateY(0deg);
 }
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: row;
+  }
+}
 
 .card {
-  width: 10vw;
-  height: 20vh;
-  min-width: 200px;
+  width: 100px;
+  height: 100px;
+  min-width: 40px;
   flex-direction: column;
   transform-style: preserve-3d;
   transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform: rotateY(180deg);
   cursor: pointer;
   margin: 1%;
+}
+@media only screen and (max-width: 400px) {
+  .card {
+    flex-direction: row;
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .flip {
@@ -250,20 +286,4 @@ body {
   margin-top: 1%;
   display: flex;
   justify-content: end;
-}
-
-@media only screen and (max-width: 600px) {
-  .container {
-    flex-direction: column;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .text,
-  .button,
-  .inputText,
-  .instructionText,
-  .input,
-  .hiEs {
-    font-size: 10px;
-  }
 }
