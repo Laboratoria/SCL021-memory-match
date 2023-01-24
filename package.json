@@ -24,6 +24,14 @@
   },
   "jest": {
     "testEnvironment": "jsdom"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Laboratoria/SCL021-memory-match.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Laboratoria/SCL021-memory-match/issues"
+  },
+  "homepage": "https://github.com/Laboratoria/SCL021-memory-match#readme"
 }
-

@@ -1,0 +1,14 @@
+
+.Card{
+    box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
+    display: flex;
+      height: 38vh;
+      width: 30vh;
+      border-radius: 8px;
+      margin-top: 5%;
+      background-color: rgb(247, 4, 4);
+      align-content: center;
+      align-items: center;
+     margin-left: 30%;
+      flex-direction: column;
+}
