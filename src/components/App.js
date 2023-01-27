@@ -1,3 +1,4 @@
+ main
 //
 // Para incluir los diferentes sets de cartas podemos _importar_ el archivo
 // JavasSript que contenga el `export` correspondiente...
@@ -36,7 +37,7 @@
 // }
 //  Card();
 
-
+ main
 const App = () => {
   
  
@@ -53,6 +54,7 @@ fetch('./data/pokemon/pokemon.json')
 console.log(data.items);
 
 data.items.map((items)=>{
+ main
   const content = document.createElement("div");
   content.className = 'Card';
   content.innerHTML = `
@@ -60,6 +62,22 @@ data.items.map((items)=>{
   <img src="${items.image}"</img>
   `;
   el.appendChild(content);
+
+  const card1 = document.createElement("div");
+  card1.className = 'Card';
+  card1.innerHTML = `
+  <h2>${items.id}</h2>
+  <img src="${items.image}"</img>
+  `;
+  el.appendChild(card1);
+  const card2 = document.createElement("div");
+  card2.className = 'Card2';
+
+
+
+
+  card1.appendChild(card2);
+  main
 });
 
 
