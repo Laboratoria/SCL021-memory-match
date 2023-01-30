@@ -1,65 +1,92 @@
- main
+.App{
 
-.Card{
-    box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
-    display: flex;
-      height: 38vh;
-      width: 30vh;
-      border-radius: 8px;
-      margin-top: 5%;
-      background-color: rgb(247, 4, 4);
-      align-content: center;
-      align-items: center;
-     margin-left: 30%;
-      flex-direction: column;
 
-.Card{
-    box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
-    backface-visibility: hidden;
-    position: absolute;
-            backface-visibility: hidden;
-            font-size: 10%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 200px;
-            height: 200px;
-     
-
+  display: grid;
+  grid-template-columns: repeat(7, 8fr);
+  gap: 10px;
+  margin-top: 10%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: infinite;
 }
-.Card2{
-    box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
-    backface-visibility: hidden;
-    position: absolute;
-            backface-visibility: hidden;
-            font-size: 10%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 200px;
-     background-image: url("./img/pokeeee.jpg");
-      
-    }
+/* cara trasera */
+.Card{
+  box-shadow: 0px 4px 4px 0px rgb(54, 7, 226);
+  background-color: aliceblue;
 
-
-
-body{
-    background-image:url("./img/Imagen\ fondo\ de\ cartas.jpeg");
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    
-    
-}
+  font-size: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin: 1px;
+  display: flex;
+  cursor: pointer;
+  transform: rotateY(360deg);
  
-    
 
-#root {
-    --w: calc(70vw / 6);
-    --h: calc(70vh / 4);
+
+
 }
+
+/* cara */
+.Card2 {
+  box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
+ 
+  font-size: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-image: url("./img/pokeeee.jpg");
+
+  cursor: pointer;
+
+            
+            
+}
+
+
+
+body {
+  background-image: url("./img/Imagen fondo de cartas.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  padding: 0;
+  margin: 0;
+ 
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ 
+
+}
+#root {
+  --w: calc(70vw / 6);
+  --h: calc(70vh / 4);
+}
+
 
 * {
-    transition: all 0.5s;
- main
+  transition: all 0.1s;
+}
+
+
+.logo{
+  
+  width: 400px; /* ancho */
+  height: 200px;  
+}
+
+.icono{
+ 
+  
+  margin-left: 25%;
 }

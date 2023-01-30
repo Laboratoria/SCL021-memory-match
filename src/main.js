@@ -1,11 +1,8 @@
-import App from './components/App.js';
+import App from "./components/App.js";
+
+document.getElementById("root").appendChild(App(darVuelta));
 
 
- main
-document.getElementById('root').appendChild(App());
+function darVuelta(){
 
-
-
-
-document.getElementById('box').appendChild(App());
- main
+}
